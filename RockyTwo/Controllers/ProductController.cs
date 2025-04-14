@@ -49,10 +49,10 @@ namespace RockyTwo.Controllers
             return View(product);
         }
 
-        //POST - Получение
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(Category obj) // Получаем обьект который нужно добваить в бд
+        public IActionResult Create(Category obj) 
         {
             if (ModelState.IsValid)
             {
@@ -71,7 +71,7 @@ namespace RockyTwo.Controllers
             {
                 return NotFound();
             }
-            var obj = _Db.Category.Find(id); // Поиск конкретного айди для изменения
+            var obj = _Db.Category.Find(id); 
 
             if (obj == null)
             {
@@ -82,14 +82,14 @@ namespace RockyTwo.Controllers
         }
 
 
-        //Post - Edit
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Edit(Category obj)
         {
             if (ModelState.IsValid)
             {
-                _Db.Update(obj); //Обновляем категорию при изменении
+                _Db.Update(obj); 
                 _Db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -105,7 +105,7 @@ namespace RockyTwo.Controllers
             {
                 return NotFound();
             }
-            var obj = _Db.Category.Find(id); // Поиск конкретного айди для изменения
+            var obj = _Db.Category.Find(id); 
 
             if (obj == null)
             {
@@ -126,7 +126,7 @@ namespace RockyTwo.Controllers
             {
                 return NotFound();
             }
-            _Db.Remove(obj); //Обновляем категорию при изменении
+            _Db.Remove(obj); 
             _Db.SaveChanges();
             return RedirectToAction("Index");
 
