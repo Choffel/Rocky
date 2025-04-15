@@ -17,7 +17,7 @@ namespace RockyTwo.Controllers
 
         public IActionResult Index()
         {
-            IEnumerable<Product> objlist = _Db.Products.ToList(); //Get all products
+            IEnumerable<Product> objlist = _Db.Products.ToList(); 
 
             foreach (var obj in objlist)
             {
@@ -29,12 +29,12 @@ namespace RockyTwo.Controllers
         }
 
 
-        //GET - UpSert
+       
         public IActionResult UpSert(int? id)
         {
             Product product = new Product();
 
-            if (id == null) // перебрасываем на новый продукт
+            if (id == null) 
             {
                 return View(product);
             }
@@ -63,10 +63,10 @@ namespace RockyTwo.Controllers
             return View(obj);
         }
 
-        //GET - Edit
+        
         public IActionResult Edit(int? id)
         {
-            //проверка
+            
             if (id == null || id == 0)
             {
                 return NotFound();
@@ -97,10 +97,10 @@ namespace RockyTwo.Controllers
         }
 
 
-        //GET - Delete
+       
         public IActionResult Delete(int? id)
         {
-            //проверка
+            
             if (id == null || id == 0)
             {
                 return NotFound();
@@ -116,7 +116,7 @@ namespace RockyTwo.Controllers
         }
 
 
-        //Post - Delete
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult DeletePost(int? id)
