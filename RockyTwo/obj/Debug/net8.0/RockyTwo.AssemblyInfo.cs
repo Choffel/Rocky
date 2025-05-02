@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RockyTwo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d88a30272a9764bf1bb18e23fc4bae94846f8e3e")]
 [assembly: System.Reflection.AssemblyProductAttribute("RockyTwo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RockyTwo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

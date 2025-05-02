@@ -47,7 +47,7 @@ namespace RockyTwo.Controllers
         
         public IActionResult Edit(int? id)
         {
-            //проверка
+            
             if(id == null || id == 0)
             {
                 return NotFound();
